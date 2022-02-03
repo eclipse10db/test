@@ -1,5 +1,6 @@
 const http = require('http');
 
+const hostname = '54.165.25.207';
 const port = 3000;
 
 const server = http.createServer((req, res) => {
@@ -8,6 +9,6 @@ const server = http.createServer((req, res) => {
   res.end('Hola Mundo');
 });
 
-server.listen(port, () => {
-  console.log(`El servidor se está ejecutando en http://${port}/`);
+server.listen(port, hostname, () => {
+  console.log(`El servidor se está ejecutando en http://${hostname}:${port}/`);
 });
